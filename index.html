@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Restaurant Review Stage" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <title>Restaurant Reviews</title>
@@ -12,17 +13,16 @@
 
 <body>
   <header>
-    <nav>
+    <nav role="navigation">
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
-
-  <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
+  <main id="maincontent" role="main content">
+    <section id="map-container" aria-label="maplocation">
+      <div id="map" role="mapapplication"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" aria-label="filter options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
@@ -36,7 +36,9 @@
   </main>
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNj-8SvkhuvekKDW8SyufTaiau0n36jM4&libraries=places&callback=initMap"></script>  
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNj-8SvkhuvekKDW8SyufTaiau0n36jM4&libraries=places&callback=initMap"></script>  -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYb1WQLh2JaKpVrdZegH69tVAI2LH9gNs&libraries=places&callback=initMap"></script>
+   
 <!-- Service Worker -->
 <script src="sw.js"></script>
   <footer id="footer">

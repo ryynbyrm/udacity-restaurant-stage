@@ -10,8 +10,8 @@ const cacheAssets = [
 	'./index.html',
 	'./restaurant.html',
 	'./css/styles.css',
-	'./js/main.js',
 	'./data/restaurants.json',
+	'./js/main.js',
 	'./js/dbhelper.js',
 	'./js/restaurant_info.js',
 	'./img/1.jpg',
@@ -72,4 +72,3 @@ self.addEventListener('fetch', (event) => {
 		})
 	);
 })
-
